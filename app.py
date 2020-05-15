@@ -1,11 +1,14 @@
 from flask import Flask, request 
+# from swagger_ui import flask_api_doc
+# api_doc(app, config_path='./config/test.yaml', url_prefix='/api/doc', title='API doc')
 import sqlite3
+import requests
 import pandas as pd
 # conn = sqlite3.connect("data/chinook.db")
 
 app = Flask(__name__) 
 
-@app.route('/sale/by/<choice>')
+@app.route('/sale/by/<choice>',methods=['GET'])
 def sales(choice):
 	if(choice == 'bulan') :
 		conn = sqlite3.connect("data/chinook.db")
