@@ -1,20 +1,7 @@
 from flask import Flask, request,jsonify
-# from flask_api import status 
-# from werkzeug.http import HTTP_STATUS_CODES
-# from swagger_ui import flask_api_doc
-# api_doc(app, config_path='./config/test.yaml', url_prefix='/api/doc', title='API doc')
 import sqlite3
-# import requests
-import pandas as pd
-# conn = sqlite3.connect("data/chinook.db")
 
-# def error_response(status_code,message=None):
-# 	payload = {'error', HTTP_STATUS_CODES.get(status_code, 'Unknown Error')}
-# 	if message:
-# 		payload['message'] = message
-# 	response = jsonify(payload)
-# 	response.status_code = status_code
-# 	return response
+import pandas as pd
 
 app = Flask(__name__) 
 
