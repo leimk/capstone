@@ -1,6 +1,6 @@
 # **ALGORITMA - CAPSTONE PROJECT - API WITH PYTHON**
 
-## **METHOD**##
+## **METHOD**
 
 ### **GET / ENDPOINTS**
 
@@ -24,3 +24,19 @@
               "September":196.2
             }
         }
+    ```
+
+* /sales/by/kuartal
+    - Endpoint ini akan mengembalikan penjualan per kuartal
+    - Contoh response yang akan dikembalikan :
+    ```
+    {
+        "Total":
+        {
+            "1":583.42,
+            "2":592.34,
+            "3":584.4,
+            "4":568.44
+        }
+    }
+    ```
