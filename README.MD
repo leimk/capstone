@@ -27,8 +27,9 @@
             }
         }
     ```
-
+```
 * **/sales/by/kuartal**
+```
     - Endpoint ini akan mengembalikan penjualan per kuartal
     - Contoh response yang akan dikembalikan :
     ```
