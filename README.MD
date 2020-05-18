@@ -1,8 +1,8 @@
-#**ALGORITMA - CAPSTONE PROJECT - API WITH PYTHON**
+# **ALGORITMA - CAPSTONE PROJECT - API WITH PYTHON**
 
-##**METHOD**##
+## **METHOD**##
 
-###**GET / ENDPOINTS**
+### **GET / ENDPOINTS**
 
 * /sales/by/bulan
     - Endpoint ini akan menarik produksi invoice per bulan
