@@ -5,7 +5,11 @@ import pandas as pd
 
 app = Flask(__name__) 
 
-@app.route('/sale/by/<choice>/<waktu>',methods=['GET'])
+# @app.route('/',methods=['GET'])
+# def coba():
+# 	return 'coba berhasil'
+
+@app.route('/sales/by/<choice>',methods=['GET'])
 def sales(choice):
 	if(choice == 'bulan') :
 		# /sales/by/bulan
@@ -49,23 +53,19 @@ def sales(choice):
 
 		return salesByYr_df.to_json()
 
-	else:
-		return
-		{'status_code' : 404,
-		 'message' : 'Path Not Found'		
-		}
-@app.route('/top/<pilih>',methods=['GET'])
-def ranking(pilih):
-	if(pilih == 'customer'):
-		# /top/customer
-		conn = sqlite3.connect('data/chinook.db')
-		sql = """
-				SELECT c.customerId,c.FirstName || ' ' || c.LastName as NamaCustomer, sum(i.Total) as Sales from INVOICES i \
-					join customers c on i.customerId = c.customerId group by c.customerId order by sum(i.Total) desc limit 10"""
-		hasil = pd.read_sql_query(sql,conn)
-		hasil_df = pd.DataFrame(hasil,columns=['NamaCustomer','Sales'])
 
-		return hasil_df.to_json()	
+# @app.route('/top/<pilih>',methods=['GET'])
+# def ranking(pilih):
+# 	if(pilih == 'customer'):
+# 		# /top/customer
+# 		conn = sqlite3.connect('data/chinook.db')
+# 		sql = """
+# 				SELECT c.customerId,c.FirstName || ' ' || c.LastName as NamaCustomer, sum(i.Total) as Sales from INVOICES i \
+# 					join customers c on i.customerId = c.customerId group by c.customerId order by sum(i.Total) desc limit 10"""
+# 		hasil = pd.read_sql_query(sql,conn)
+# 		hasil_df = pd.DataFrame(hasil,columns=['NamaCustomer','Sales'])
+
+# 		return hasil_df.to_json()	
 		
 
 	
