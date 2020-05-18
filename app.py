@@ -54,18 +54,18 @@ def sales(choice):
 		return salesByYr_df.to_json()
 
 
-# @app.route('/top/<pilih>',methods=['GET'])
-# def ranking(pilih):
-# 	if(pilih == 'customer'):
-# 		# /top/customer
-# 		conn = sqlite3.connect('data/chinook.db')
-# 		sql = """
-# 				SELECT c.customerId,c.FirstName || ' ' || c.LastName as NamaCustomer, sum(i.Total) as Sales from INVOICES i \
-# 					join customers c on i.customerId = c.customerId group by c.customerId order by sum(i.Total) desc limit 10"""
-# 		hasil = pd.read_sql_query(sql,conn)
-# 		hasil_df = pd.DataFrame(hasil,columns=['NamaCustomer','Sales'])
+@app.route('/top/<pilih>',methods=['GET'])
+def ranking(pilih):
+	if(pilih == 'customer'):
+		# /top/customer
+		conn = sqlite3.connect('data/chinook.db')
+		sql = """
+				SELECT c.customerId,c.FirstName || ' ' || c.LastName as NamaCustomer, sum(i.Total) as Sales from INVOICES i \
+					join customers c on i.customerId = c.customerId group by c.customerId order by sum(i.Total) desc limit 10"""
+		hasil = pd.read_sql_query(sql,conn)
+		hasil_df = pd.DataFrame(hasil,columns=['NamaCustomer','Sales'])
 
-# 		return hasil_df.to_json()	
+		return hasil_df.to_json()	
 		
 
 	
