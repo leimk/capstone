@@ -1,6 +1,6 @@
 from flask import Flask, request,jsonify
-from flask_api import status 
-from werkzeug.http import HTTP_STATUS_CODES
+# from flask_api import status 
+# from werkzeug.http import HTTP_STATUS_CODES
 # from swagger_ui import flask_api_doc
 # api_doc(app, config_path='./config/test.yaml', url_prefix='/api/doc', title='API doc')
 import sqlite3
