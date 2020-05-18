@@ -9,7 +9,7 @@
 ```
     - Endpoint ini akan menarik produksi invoice per bulan
     - Contoh response yang akan didapatkan :
-    ```
+    
       {
           "Total":{
               "April":198.14,
@@ -26,7 +26,7 @@
               "September":196.2
             }
         }
-    ```
+    
 ```
 * **/sales/by/kuartal**
 ```
