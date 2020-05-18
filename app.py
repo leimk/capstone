@@ -18,7 +18,7 @@ import pandas as pd
 
 app = Flask(__name__) 
 
-@app.route('/sale/by/<choice>',methods=['GET'])
+@app.route('/sale/by/<choice>/<waktu>',methods=['GET'])
 def sales(choice):
 	if(choice == 'bulan') :
 		# /sales/by/bulan
