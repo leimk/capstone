@@ -1,6 +1,6 @@
 #ALGORITMA - CAPSTONE PROJECT - API WITH PYTHON
 
-##**METHOD**
+##**METHOD**##
 ###**GET / ENDPOINTS**
 
 * /sales/by/bulan
