@@ -4,7 +4,7 @@
 
 ### **GET / ENDPOINTS**
 
-```
+
 * **/sales/by/bulan**
 ```
     - Endpoint ini akan menarik produksi invoice per bulan
