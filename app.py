@@ -62,8 +62,11 @@ def sales(choice):
 
 		return salesByYr_df.to_json()
 
-	# else:
-	# 	return jsonify()
+	else:
+		return
+		{'status_code' : 404,
+		 'message' : 'Path Not Found'		
+		}
 @app.route('/top/<pilih>',methods=['GET'])
 def ranking(pilih):
 	if(pilih == 'customer'):
